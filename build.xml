@@ -1,0 +1,13 @@
+<project name="PIDFinControl" basedir="." default="build">
+
+    <property name="src.dir" value="${basedir}"/>
+    <property name="build.dir" value="${basedir}/build"/>
+
+
+    <target name="build">
+        <mkdir dir="${build.dir}"/>
+        <javac debug="true" srcdir="${src.dir}" destdir="${build.dir}" classpath="OpenRocket.jar" includeantruntime="false" source="1.6" target="1.6"/>
+    	<jar destfile="PIDFinControl.jar" basedir="${build.dir}"/>
+    </target>
+
+</project>
